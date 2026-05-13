@@ -53,6 +53,17 @@ body {
     linear-gradient(135deg, #020202 0%, #060607 30%, #09090d 62%, #030304 100%);
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -66,76 +77,6 @@ a {
 .site-shell {
   position: relative;
   isolation: isolate;
-}
-
-body {
-  opacity: 0;
-  animation: pageFadeIn 0.8s var(--ease) forwards;
-}
-
-header,
-.hero,
-.ticker,
-.statement,
-.structure,
-.manifesto-block,
-.cta-section,
-.footer {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: fadeSlideIn 0.9s var(--ease) both;
-}
-
-header {
-  animation-delay: 0.05s;
-}
-
-.hero {
-  animation-delay: 0.12s;
-}
-
-.ticker {
-  animation-delay: 0.18s;
-}
-
-.statement {
-  animation-delay: 0.24s;
-}
-
-.structure {
-  animation-delay: 0.30s;
-}
-
-.manifesto-block {
-  animation-delay: 0.36s;
-}
-
-.cta-section {
-  animation-delay: 0.42s;
-}
-
-.footer {
-  animation-delay: 0.48s;
-}
-
-@keyframes pageFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .container {
@@ -793,12 +734,17 @@ header {
   min-width: max-content;
 }
 
-.ticker-track span {
+.ticker-copy {
   white-space: nowrap;
-  padding-right: 4rem;
   color: var(--text-soft);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+}
+
+.ticker-bullet {
+  display: inline-block;
+  margin: 0 0.8rem;
+  color: var(--red);
 }
 
 /* Statement */
