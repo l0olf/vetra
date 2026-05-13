@@ -739,6 +739,7 @@ a {
   color: var(--text-soft);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+  font-weight: 200;
 }
 
 .ticker-bullet {
@@ -1360,6 +1361,10 @@ a {
 
   .footer-meta {
     gap: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .ticker-copy {
     font-size: 0.82rem;
   }
 }
