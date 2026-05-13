@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const observer = new IntersectionObserver(
-    (entries, obs) => {
+    (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("is-visible");
         }
       });
     },
