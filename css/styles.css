@@ -1027,8 +1027,7 @@ a {
 }
 
 .footer-brand img {
-  width: 24px;
-  height: 24px;
+  height: 20px;
   object-fit: contain;
 }
 
